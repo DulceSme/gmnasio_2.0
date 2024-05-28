@@ -9,11 +9,11 @@
             </div>
             <div class="mt-12 flex flex-col items-center">
                 <h1 class="text-2xl xl:text-3xl font-extrabold">
-                    Iniciar sesion
+                    Registrar Usuario
                 </h1>
                 <div class="w-full flex-1 mt-8">
                     <div class="flex flex-col items-center">
-                        <button
+                        <!-- <button
                             class="w-full max-w-xs font-bold shadow-sm rounded-lg py-3 bg-indigo-100 text-gray-800 flex items-center justify-center transition-all duration-300 ease-in-out focus:outline-none hover:shadow focus:shadow-sm focus:shadow-outline">
                             <div class="bg-white p-2 rounded-full">
                                 <svg class="w-4" viewBox="0 0 533.5 544.3">
@@ -34,9 +34,9 @@
                             <span class="ml-4">
                                 Registrarse con Google
                             </span>
-                        </button>
+                        </button> -->
 
-                        <button
+                        <!-- <button
                             class="w-full max-w-xs font-bold shadow-sm rounded-lg py-3 bg-indigo-100 text-gray-800 flex items-center justify-center transition-all duration-300 ease-in-out focus:outline-none hover:shadow focus:shadow-sm focus:shadow-outline mt-5">
                             <div class="bg-white p-1 rounded-full">
                                 <svg class="w-6" viewBox="0 0 32 32">
@@ -47,23 +47,34 @@
                             <span class="ml-4">
                                 Registrarse con GitHub
                             </span>
-                        </button>
+                        </button> -->
                     </div>
 
-                    <div class="my-12 border-b text-center">
+                    <!-- <div class="my-12 border-b text-center">
                         <div
                             class="leading-none px-2 inline-block text-sm text-gray-600 tracking-wide font-medium bg-white transform translate-y-1/2">
-                            Registrarse con e-mail
+                            Nombre
                         </div>
-                    </div>
+                    </div> -->
 
                     <div class="mx-auto max-w-xs">
                         <input
                             class="w-full px-8 py-4 rounded-lg font-medium bg-gray-100 border border-gray-200 placeholder-gray-500 text-sm focus:outline-none focus:border-gray-400 focus:bg-white"
-                            type="email" placeholder="Email" />
+                            type="nombre" placeholder="Nombre" />
                         <input
                             class="w-full px-8 py-4 rounded-lg font-medium bg-gray-100 border border-gray-200 placeholder-gray-500 text-sm focus:outline-none focus:border-gray-400 focus:bg-white mt-5"
-                            type="password" placeholder="Password" />
+                            type="apellodos" placeholder="Apellidos" />
+                        <input
+                            class="w-full px-8 py-4 rounded-lg font-medium bg-gray-100 border border-gray-200 placeholder-gray-500 text-sm focus:outline-none focus:border-gray-400 focus:bg-white mt-5"
+                            type="telefono" placeholder="Numero de Telefono" />
+
+                        <input
+                            class="w-full px-8 py-4 rounded-lg font-medium bg-gray-100 border border-gray-200 placeholder-gray-500 text-sm focus:outline-none focus:border-gray-400 focus:bg-white mt-5"
+                            type="correo" placeholder="Correo" />
+                        <input
+                            class="w-full px-8 py-4 rounded-lg font-medium bg-gray-100 border border-gray-200 placeholder-gray-500 text-sm focus:outline-none focus:border-gray-400 focus:bg-white mt-5"
+                            type="contraseña" placeholder="Contraseña" />
+                        
                         <button
                             class="mt-5 tracking-wide font-semibold bg-indigo-500 text-gray-100 w-full py-4 rounded-lg hover:bg-indigo-700 transition-all duration-300 ease-in-out flex items-center justify-center focus:shadow-outline focus:outline-none">
                             <svg class="w-6 h-6 -ml-2" fill="none" stroke="currentColor" stroke-width="2"
@@ -92,9 +103,41 @@
                 </div>
             </div>
         </div>
-        <div class="flex-1 bg-indigo-100 text-center hidden lg:flex">
-            <div class="m-12 xl:m-16 w-full bg-contain bg-center bg-no-repeat"
-                style="background-image: url('https://storage.googleapis.com/devitary-image-host.appspot.com/15848031292911696601-undraw_designer_life_w96d.svg');">
+        <div class="lg:w-1/2 xl:w-5/12 p-6 sm:p-12">
+            <div>
+                <!-- <img src="https://storage.googleapis.com/devitary-image-host.appspot.com/15846435184459982716-LogoMakr_7POjrN.png"
+                    class="w-32 mx-auto" /> -->
+            </div>
+            <div class="mt-12 flex flex-col items-center">
+                <h1 class="text-2xl xl:text-3xl font-extrabold">
+                          
+
+
+
+
+                </h1>
+                <div class="w-full flex-1 mt-8">
+                    <div class="flex flex-col items-center">
+                      </div>
+                    <div class="mx-auto max-w-xs">
+                        <input
+                            class="w-full px-8 py-4 rounded-lg font-medium bg-gray-100 border border-gray-200 placeholder-gray-500 text-sm focus:outline-none focus:border-gray-400 focus:bg-white"
+                            type="tipo_sangre" placeholder="Tipo de Sangre" />
+                        <input
+                            class="w-full px-8 py-4 rounded-lg font-medium bg-gray-100 border border-gray-200 placeholder-gray-500 text-sm focus:outline-none focus:border-gray-400 focus:bg-white mt-5"
+                            type="apellodos" placeholder="Apellidos" />
+                        <input
+                            class="w-full px-8 py-4 rounded-lg font-medium bg-gray-100 border border-gray-200 placeholder-gray-500 text-sm focus:outline-none focus:border-gray-400 focus:bg-white mt-5"
+                            type="telefono" placeholder="Numero de Telefono" />
+
+                        <input
+                            class="w-full px-8 py-4 rounded-lg font-medium bg-gray-100 border border-gray-200 placeholder-gray-500 text-sm focus:outline-none focus:border-gray-400 focus:bg-white mt-5"
+                            type="correo" placeholder="Correo" />
+                        <input
+                            class="w-full px-8 py-4 rounded-lg font-medium bg-gray-100 border border-gray-200 placeholder-gray-500 text-sm focus:outline-none focus:border-gray-400 focus:bg-white mt-5"
+                            type="contraseña" placeholder="Contraseña" />
+                    </div>
+                </div>
             </div>
         </div>
     </div>
