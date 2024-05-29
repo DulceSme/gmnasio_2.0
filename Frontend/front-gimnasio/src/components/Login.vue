@@ -94,7 +94,7 @@
         </div>
         <div class="flex-1 bg-indigo-100 text-center hidden lg:flex">
             <div class="m-12 xl:m-16 w-full bg-contain bg-center bg-no-repeat"
-                style="background-image: url('https://storage.googleapis.com/devitary-image-host.appspot.com/15848031292911696601-undraw_designer_life_w96d.svg');">
+                style="background-image: url('https://imagenes.elpais.com/resizer/v2/7QNKU5WNEZF3DH7VR5ZPPKTPKE.png?auth=cc5859def9520efb3ff1d28809f30810d7662e4951c62eea27481ba888a6e505&width=1960&height=1103&smart=true');">
             </div>
         </div>
     </div>
