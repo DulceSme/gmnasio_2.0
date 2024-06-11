@@ -2,13 +2,13 @@ import { createRouter, createWebHistory } from 'vue-router'
 import LoginView from '@/components/Login.vue'
 import RegisterUser from '@/components/RegisterUser.vue'
 import dashboardView from '@/components/dashboard.vue'
-import Productosview from '@/components/Productos.vue'
-import Detalle_productoView from '@/components/Detalle_Producto.vue'
-// import PromocionesView from '@/components/Promociones.vue'
-// import Detalle_PromocionesView from '@/components/Detalle_promociones.vue'
-// import PedidosView from '@/components/Pedidos.vue'
-// import Detalle_pedidosView from '@/components/detalle_pedido.vue'
-// import TransaccionView from '@/components/transaccion.vue'
+import ProductosView from '@/components/productos.vue';
+import DetallesProductosView from '@/components/deProductos.vue';
+import PromocionesView from '@/components/promociones.vue';
+import DetallesPromocionesView from '@/components/dePromociones.vue';
+import PedidosView from '@/components/pedidos.vue';
+import DetallesPedidosView from '@/components/dePedidos.vue';
+import TransaccionPagosView from '@/components/transPagos.vue';
 
 
 const router = createRouter({
@@ -30,8 +30,13 @@ const router = createRouter({
       component: dashboardView,
       children:[
         {path:'/personas', name: 'personas',component: RegisterUser},
-        {path:'/productos', name: 'productos',component: Productosview},
-        {path:'/detalle_producto', name: 'productos',component: Detalle_productoView},
+        { path: "/productos", name: "productos", component: ProductosView },
+        { path: "/deProductos", name: "detallesProductos", component: DetallesProductosView },
+        { path: "/promociones", name: "promociones", component: PromocionesView },
+        { path: "/dePromociones", name: "detallesPromociones", component: DetallesPromocionesView },
+        { path: "/pedidos", name: "pedidos", component: PedidosView },
+        { path: "/dePedidos", name: "detallesPedidos", component: DetallesPedidosView },
+        { path: "/transPagos", name: "transaccionPagos", component: TransaccionPagosView }
 
        
 
