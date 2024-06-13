@@ -2,9 +2,9 @@ import { createRouter, createWebHistory } from 'vue-router'
 import LoginView from '@/components/Login.vue'
 import RegisterUser from '@/components/RegisterUser.vue'
 import dashboardView from '@/components/dashboard.vue'
-import ProductosView from '@/components/productos.vue';
+import ProductosView from '@/components/Productos.vue';
 import DetallesProductosView from '@/components/deProductos.vue';
-import PromocionesView from '@/components/promociones.vue';
+import PromocionesView from '@/components/Promociones.vue';
 import DetallesPromocionesView from '@/components/dePromociones.vue';
 import PedidosView from '@/components/pedidos.vue';
 import DetallesPedidosView from '@/components/dePedidos.vue';
