@@ -1,5 +1,8 @@
 from fastapi import FastAPI
 from routes.user import user
-app=FastAPI()
+
+app = FastAPI()
 app.include_router(user)
-print("Holaaaaaaaaaaaaa")
+
+
+print("Hola bienvenido a mi backend")
