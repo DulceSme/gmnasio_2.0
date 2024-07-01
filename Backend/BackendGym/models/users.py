@@ -1,9 +1,14 @@
-from sqlalchemy import Column, Integer, String,DateTime,Boolean,LO
+from sqlalchemy import Column, Integer, String,DateTime,Boolean,ForeignKey
+from sqlalchemy.dialects.mysql import LONGTEXT
+from sqlalchemy.orm import relationship
 from config.bd import Base
 class users(Base):
     __tablename__ = "users"
     
     id= Column(Integer, primary_key=True, index=True)
-    usuario=Column(String(255),index=True)
-    password=Column(String(255), index=True)
-    estatus = Column(Boolean, index=True)       
+    usuario=Column(String(255))
+    password=Column(LONGTEXT)
+    created_at=Column(DateTime)
+    estatus = Column(Boolean, default=False)  
+    Id_persona=Column(Integer)
+         
