@@ -3,62 +3,69 @@ from pydantic import BaseModel
 from datetime import datetime
 
 person = APIRouter()
-persons = [
+persons = []
 
-]
-class models_person(BaseModel):
+#personsModel
+class model_person(BaseModel):
     id:str
     nombre:str
     primer_apellido: str
     segundo_apellido: str
     direccion: str
-    telefono:str
+    telefono: str
     correo: str
     sangre: str
     fecha_nacimiento: datetime
     created_at:datetime = datetime.now()
     estatus:bool=False
 
-@person.get("/")
+@person.get('/')
 
-def bienvenido():
-    return "Hola 9B"
+def bienvenida():
+    return "Bienvenido al sistema de apis"
 
-@person.get("/person", tags=['Personas'])
+@person.get('/persons', tags=["Personas"])
 
-def getPerson():
+def get_personas():
     return persons
 
-@person.post("/person/{person_id}", tags=['Personas'])
+@person.post('/persons', tags=["Personas"] )
 
-def postPerson(person_id: str):
+def save_personas(insert_persons:model_person):
+    persons.append(insert_persons)
+    print (insert_persons)
+    return "Datos guardados"
+
+@person.post('/person/{person_id}', tags=["Personas"])
+
+def get_persona(person_id: str):
+    for person in persons:
+        if person.id== person_id:
+            return person
+    return "No existe el registro"
+
+@person.delete('/person/{person_id}', tags=["Personas"])
+
+def delete_persona(person_id: str):
     for person in persons:
         if person.id == person_id:
-            return person
+            persons.remove(person)
+            return "Registro eliminado correctamente"
+    return "Registro no encontrado"
 
-@person.post('/person', tags=['Personas'])
+@person.put('/person/{person_id}', tags=["Personas"])
 
-def insertPerson(insert_person:models_person):
-    persons.append(insert_person)
-    return {"message": f"Se ha insertado un nuevo usuario con el ID: {insert_person.id}"}
-
-@person.put('/person/{person_id}', tags=['Personas'])
-
-def updatePerson(update_person:models_person, person_id: str):
-    print(update_person)
-    for index, person in enumerate(persons):
+def update_persona(person_id: str, updateperson: model_person):
+    for person in persons:
         if person.id == person_id:
-            update_person.created_at = person.created_at
-        
-            persons[index] = update_person
-            
-            return {"message": f"Se ha modificado correctamente a la persona con el ID: {person_id}"}
-
-@person.delete('/person/{person_id}', tags=['Personas'])
-
-def deletePerson(person_id: str):
-    for index, person in enumerate(persons):
-        if person.id == person_id:
-            persons.pop(index)
-            return {"message": f"Se ha eliminado correctamente a la persona con el ID: {person_id}"}
-
+            person.nombre=updateperson.nombre
+            person.primer_apellido=updateperson.primer_apellido
+            person.segundo_apellido=updateperson.segundo_apellido
+            person.direccion=updateperson.direccion
+            person.telefono=updateperson.telefono
+            person.correo=updateperson.correo
+            person.sangre=updateperson.sangre
+            person.fecha_nacimiento=updateperson.fecha_nacimiento
+            person.estatus=updateperson.estatus
+            return "Registro actualizado correctamente"
+    return "Registro no encontrado"
