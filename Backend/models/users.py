@@ -1,7 +1,7 @@
 from sqlalchemy import Column, Integer, String,DateTime,Boolean,ForeignKey
 from sqlalchemy.dialects.mysql import LONGTEXT
 from sqlalchemy.orm import relationship
-from config.bd import Base
+from config.db import Base
 class users(Base):
     __tablename__ = "users"
     
