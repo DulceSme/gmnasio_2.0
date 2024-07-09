@@ -17,8 +17,12 @@ class UserUpdate(UserBase):
 
 class User(UserBase):
     id: int
-    #owner_id: int clave foranea
+    Id_persona: int
     class Config:
         orm_mode = True
+        
+class UserLogin(BaseModel):
+    usuario: str
+    password: str
 
 
