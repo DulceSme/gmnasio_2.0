@@ -9,3 +9,4 @@ SQLALCHEMY_DATABASE_URL = 'mysql://avnadmin:AVNS_w5V21kW9pfSV8Ypbo7a@mysql-899b5
 engine = create_engine(SQLALCHEMY_DATABASE_URL)
 SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
 Base = declarative_base()
+#
